@@ -6,16 +6,22 @@ from bs4 import BeautifulSoup
 # p={}
 # 
 # =============================================================================
-
+source2=requests.get('https://internshala.com/internships/').text
+soup2=BeautifulSoup(source2,'lxml')
+category=(soup2.find('div',attrs={"id":"content"}).find('div',attrs={"id":"categoryOptions"})
+ 
+#  =============================================================================
 # =============================================================================
-# source=requests.get('https://internshala.com/internships/machine%20learning-internship-in-bangalore').text
-# soup=BeautifulSoup(source,'lxml')
-# for c in (soup.find('div',attrs={"id":"content"})).findAll('div',attrs={"class":"individual_internship_header"}):
-#    d=c.find('div')
-#     l.append((d.h4.a)['href'])
-# t=c.find('div',attrs={"class":"individual_internship_header"})
-# 
+#   source=requests.get('https://internshala.com/internships/machine%20learning-internship-in-bangalore').text
+#   soup=BeautifulSoup(source,'lxml')
+#   for c in (soup.find('div',attrs={"id":"content"})).findAll('div',attrs={"class":"individual_internship_header"}):
+#      d=c.find('div')
+#       l.append((d.h4.a)['href'])
+#   t=c.find('div',attrs={"class":"individual_internship_header"})
+#   
 # =============================================================================
+ # =============================================================================
+# # =============================================================================
 # =============================================================================
 # source1=requests.get('https://internshala.com/internship/detail/nlp-machine-learning-internship-in-bangalore-at-primenumbers-technologies1528394254').text
 # soup1=BeautifulSoup(source1,'lxml')
@@ -30,5 +36,3 @@ from bs4 import BeautifulSoup
 # table[:]=map(lambda x: x.text, table)
 # table1[:]=map(lambda x: x.text, table1)
 # p=dict(zip(table,table1))
-# 
-# =============================================================================
